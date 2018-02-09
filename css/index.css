@@ -1,12 +1,14 @@
 h1{
     text-align: center;
 }
+@media screen and (min-width: 800px) {
+
 nav{
     text-align: center;
     position: sticky;
     top: 100px;
 }
-
+}
 h1{
     position: sticky;
     top: 0px;
