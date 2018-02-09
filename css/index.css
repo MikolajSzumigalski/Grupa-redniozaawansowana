@@ -1,3 +1,27 @@
 h1{
     text-align: center;
 }
+nav{
+    text-align: center;
+    position: sticky;
+    top: 100px;
+}
+
+h1{
+    position: sticky;
+    top: 0px;
+}
+
+fixed{
+    position: fixed;
+}
+
+.flexlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.flexlist>li{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
