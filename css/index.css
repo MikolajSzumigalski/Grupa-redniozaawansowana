@@ -40,4 +40,8 @@ fixed{
     border: 5px solid #1f0526;
     padding: 10px;
     border-radius: 10px;
+    text-decoration: none;
+}
+.tematy > a{
+    text-decoration: none;
 }
