@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;">
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+    <div class="w3-container">
+        <h2>Przypomnienie wiedzy o Git i Github</h2>
+        <p>Na początek wykonamy kilka ćwiczeń odświerzających wiedzę o Gicie.</p>
+        <h3>Zad 0</h3>
+        <ul>
+            <li>Załóż na Github'ie nowe repozytorium o nazwie <b>SealcodeIntGroup2018S</b></li>
+            <li>Utwórz lokalne repozytorium na komputrze, a następnie dodaj o niego katalog o nazwie <b>Zaj1</b>. Wszystkie pliki z dzisiejszych zajęć proszę umieszczać tam</li>
+            <li>Do następnych zadań będziemy używać poleceń <b>POWŁOKI BASH</b>
+                <table class="w3-table w3-theme-l4 w3-table-all">
+                    <thead>
+                        <tr>
+                            <th>Polecenie</th>
+                            <th>Wynik</th>
+                        </tr>
+                        <tr>
+                            <td>cd <i>nazwa katalogu</i></td>
+                            <td>przejście do danego katalogu</td>
+                        </tr>
+                        <tr>
+                            <td>mkdir <i>nazwa nowego katalogu</i></td>
+                            <td>utworzenie katalogu o wybranej nazwie</td>
+                        </tr>
+                        <tr>
+                            <td>pwd</td>
+                            <td>pokazuje ścieżkę do obecnego katalogu w którym jesteśmy</td>
+                        </tr>
+                        <tr>
+                            <td>cat <i>nazwa pliku</i></td>
+                            <td>wypisanie zawartości pliku</td>
+                        </tr>
+                        <tr>
+                            <td>rmdir <i>nazwa katalogu</i></td>
+                            <td>usunięcie katalogu o wybranej nazwie</td>
+                        </tr>
+                        <tr>
+                            <td>touch <i>nazwa pliku</i></td>
+                            <td>jeśli plik nie istnieje tworzymy go. (jest to również 'dotknięcie pliku', jeśli plik o nazwie istnieje zmienia ono jego datę edycji)</td>
+                        </tr>
+                        <tr>
+                            <td>clear</td>
+                            <td>wyczyszczenie okna terminala</td>
+                        </tr>
+                        <tr>
+                            <td>cd ..</td>
+                            <td>wejście do katalogu wyżej</td>
+                        </tr>
+                        <tr>
+                            <td>echo <i>treść pliku</i>&nbsp;> <i>nazwa pliku</i></td>
+                            <td>wprowadzenie danych do pliku</td>
+                        </tr>
+                    </thead>
+
+                </table>
+                <ul>
+                    <li>Przejdź do katalogu <b>Zaj1</b></li>
+                    <li>Utwórz katalog o nazwie <b>css</b> i wejdź do niego</li>
+                    <li>Stwórz plik o nazwie <b>style.css</b></li>
+                    <li>Wyjdź z katalogu </li>
+                </ul>
+            </li>
+        </ul>
+            <h2>1. Figure i figcaption</h2>
+            <p>Wrzucając obrazek często chcemy, aby znalazł się pod nim podpis. Do tego najlepiej użyć znacznika <b>figure</b> wewnątrz którego umieszczami obraz <b>img</b> oraz znacznik <b>figcaption</b> wewnątrz którego wpisujemy podpis do obrazka</p>
+            <a href="../img/zaj2/1.png"><img class="w3-image" src="../img/zaj2/1.png"></a>
+            <h3>Zad 1.1</h3>
+            <p>Stwórz w katalogu <b>Zaj1</b> plik html o nazwie <b>zad11.html</b>. Za pomocą figure i figcaption dodaj 3 obrazki z podpisami. </p>
+            <h2>2 Formularze</h2>
+            <h4>Zad 2.1</h4>
+            <p>Do czego służą formularze?</p>
+            <h4>2.1 Jak działają formularze</h4>
+            <p>Wiemy jak to się odbywa po stronie użytkownika: najpierw wypełniamy pola, potem klikamy przycisk i strona wysyła gdzieś te dane. Po naszej stronie wygląda to tak: naciśnięcie guzika wywołuje <b>skrypt</b>, który przesyła nasze dane w miejsce docelowe, a następnie przesyła użytkownikowi informację o tym czy dane zostały wysłane poprawnie</p>
+            <p>Zaczynamy od znacznika <b>form</b>. Posiada on m.in. atrybut <b>action</b> w którym określamy w jaki sposób przesyłamy nasz formularz (może to być np. skrypt PHP). Dalej umieszczamy pola formularza (np. za pomocą znaczników <b>input</b> z określonymi atrybutami), oraz guzikiem uruchamiający skrypt i przesyłajacy dane wypełnione w formularzu.</p>
+            <h4>2.2 Pola formularzy</h4>
+            <p>Jak już wcześniej wspomniałem znacznikowi <b>input</b> można przypisać różne preferencje jeśli chodzi o dane (czy ma dotyczyć imienia, nazwiska, adresu e-mail). Są też inne rodzaje pól tekstowych które omówimy sobie poniżej</p>
+            <table class="w3-table w3-theme-l4 w3-table-all">
+                <tr>
+                    <th>Typy pól formularza</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="w3-code htmlHigh notranslate">&lt;input type="text"&gt;</div>
+                    </td>
+                    <td>pole do tekstu (1 linia)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="w3-code htmlHigh notranslate">&lt;input type="radio"&gt;</div>
+                    </td>
+                    <td>Definiuje przycisk do wielu opcji, z których można wybrać jedną (radio button)</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="submit"&gt;</div></td>
+                    <td>Definiuje przycisk do wysyłania formularza</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="password"&gt;</div></td>
+                    <td>pole tekstowe jest wykropkowane</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="reset"&gt;</div></td>
+                    <td>definiuje guzik, który resetuje pola tekstowe formularza</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="checkbox"&gt;</div></td>
+                    <td>Definiuje przycisk do wielu opcji, z których można wybrać <b>wiele</b></td>
+                </tr>
+                    <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="color"&gt;</div></td>
+                        <td>Pozwala wybrać kolor z palety wielu kolorów  <b><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_color">przykład </a></b>(Nie wspierana przez wiele przeglądarek!)</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="date"&gt;</div></td>
+                        <td>Pozwala wybrać datę (na różne sposoby w zależności od przeglądarki) <b><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date">przykład </a></b>(Nie wspierana przez niektóre przeglądarki!)</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="date"&gt;</div></td>
+                        <td>Pozwala wybrać datę (na różne sposoby w zależności od przeglądarki) <b><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date">przykład </a></b>(Nie wspierana przez niektóre przeglądarki!)</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="email"&gt;</div></td>
+                        <td>zapamiętuje i podopowiada emaile, jeśli wprowadzaliśmy je gdzieś na innych stronach (Nie wspierana przez niektóre przeglądarki!)</td>
+                </tr>
+                <tr>
+                    <td><div class="w3-code htmlHigh notranslate">&lt;input type="time"&gt;</div></td>
+                        <td>możemy wybrać sobie godzinę (Nie wspierana przez niektóre przeglądarki!)</td>
+                </tr>
+            </table>
+        <h4>2.3 Atrybut <i>value</i> i <i>placeholder</i></h4>
+        <p>Atrybut value pozwala nam wpisać w input domyślną wartość (a w przypadku color, kolor w zapisie heksadecymalnym). Atrybut <b>placeholder</b> wpisuje "przenikającą" wartość</p>
+        <h4>2.4 Select i option</h4>
+        <p>Atrybuty select i option wyświtlają nam listę wyboru. Na przykładzie wygląda to tak: </p>
+        <a href="../img/zaj1/selectoption.png"><img src="../img/zaj1/selectoption.png" width=500px></a>
+        <p>Dodatkowo znacznik <b>select</b> posiada atrybut <b>size</b>, który pozwala określić ile elementów listy się wyświetla</p>
+        <h4>2.4 Textarea</h4>
+        <p>Znacznik <b>textarea</b> pozwala na utworzenie pola tekstowego, przy którym mamy kontrolę nad jego wilkością. Atrybuty <b>rows</b> i <b>cols</b> pozwalają nam ustalić wysokość i szerokość (w literach)</p>
+        <h4>Fieldset</h4>
+        <p>Fieldset tworzy nam obszar, który spaja ramką ze sobą wszystkie elementy formularza i grupuje je. Fieldset poisada też ciekawe atrybuty takie jak: <b>disabled</b> - który blokuje wszystkie elementy formularza, <b>form</b> dzięki któremu możemy dodać do formularza elementy, które są poza nim, oraz <b>name</b> - ten atrybut posiada większość elementów, zastępuje id, kiedy korzystamy np ze skryptów php.</p>
+        <h4>Legend</h4>
+        <p>Znacznik legend łączy się ze znacznikiem <b>fieldset</b>, ponieważ ustala tytuł formularza</p>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+    
+</html>
