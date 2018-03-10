@@ -1,0 +1,13 @@
+/*.button{
+    background-color: lightblue;
+    width: 80px;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    transition-duration: 2s;
+}
+
+.button:hover{
+    background-color: blue;
+}
+*/

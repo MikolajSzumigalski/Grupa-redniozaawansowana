@@ -18,7 +18,7 @@
     </h1>
     <div class="w3-container w3-li">
         <h2>Przydatne wtyczki do Brackets'a</h2>
-        <ul class="w3-ul w3-border">
+        <ul class="w3-ul w3-border w3-card-4">
             <li><b>EMMET</b> - pozwala na używanie skrótów usprawniających pracę np:
                 <ul>
                     <li>nazwa znacznika + tabulator - tworzy nam znacznik (razem z zamknięciem) </li>
@@ -35,13 +35,253 @@
             <li><b>Custom work</b> - dzięki niemu pliki wyświetlają się nad stroną, co ułatwia przechodzenie między nimi, dodaje też ikonki koło plików co ułatwia troszkę ich identyfikację</li>
             <li><b>Beautify</b> - porządkuje wcięcia i sprawia, że kod staje się czytelny</li>
             <li><b>Brackets CSS Class Code hint</b> - podpowiada nam jakie klasy i id posiadamy w dołączonym pliku css podczas pisania class=""</li>
+            <li><b>CSS Lint</b> - podpowiedzi do CSS</li>
+            <li><b>Brackets Git</b> - nie polecam używać tej wtyczki przynajmniej w tym semestrze. Wydaje mi się, że warto na początku jeśli się jeszcze dobrze nie zna Gita, poużywać konsoli, te polecenia mogą się Wam kiedyś przydać.</li>
         </ul>
+        <h2>Efekt przejścia</h2>
+        <p>Właściwość <b>transition</b> pozwala nam utworzyć pewien efekt animacji. Wspomniana animacja będzie prezentować zmianę wartości określonych właściwości CSS dla danego elementu. W efekcie tym zobaczymy przejście jednych wartości właściwości CSS w drugie, dlatego efekt <i>transition</i> możemy nazywać również <b>efektem przejścia</b>.</p>
+        <h3>Zadanie 1</h3>
+        <p>Przeanalizuj kody źródłowe</p>
+        <p>Nr 1:</p>
+        <div class="w3-code cssHigh">
+        div { <br>
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        } <br>
+         <br>
+        div:hover { <br>
+          width: 80%; <br>
+          background-color: blue; <br>
+        }
 
+        </div>
+        <p>Nr 2:</p>
+        <div class="w3-code cssHigh">
+        div { <br>
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        &emsp;transition-duration: 5s; <br>
+        } <br>
+        <br>
+        div:hover { <br>
+          width: 80%; <br>
+          background-color: blue; <br>
+        }
+        </div>
+        <h3>Zadanie 2</h3>
+        <p>Przeanalizuj poniższe kody źródłowe i powiedz, do czego służą użyte w nich właściwości związane z efektem przejścia.</p>
+        <p></p>
+        <p>Kod nr 1:</p>
+        <div class="w3-code cssHigh">
+        div { <br>
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        &emsp;transition-duration: 5s; <br>
+        &emsp;transition-property: background-color; <br>
+        } <br>
+         <br>
+        div:hover { <br>
+        &emsp;width: 80%; <br>
+        &emsp;background-color: blue; <br>
+        }
+        </div>
+        <p>Kod nr 2:</p>
+        <div class="w3-code cssHigh">
+        div { <br>
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        &emsp;transition-duration: 5s; <br>
+        &emsp;transition-timing-function: linear; <br>
+        } <br>
+     <br>
+        div:hover { <br>
+        &emsp;width: 80%; <br>
+        &emsp;background-color: blue; <br>
+        }
+        </div>
+        <p>Kod nr 3:</p>
+        <div class="w3-code cssHigh">
+        div { <br>
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        &emsp;transition-duration: 5s; <br>
+        &emsp;transition-delay: 500ms; <br>
+        } <br>
+        <br>
+        div:hover { <br>
+        &emsp;width: 80%; <br>
+        &emsp;background-color: blue; <br>
+        }
+        </div>
+        <p>Kod nr 4:</p>
+        <div class="w3-code cssHigh">
+        div {
+        &emsp;width: 50%; <br>
+        &emsp;height: 100px; <br>
+        &emsp;background-color: #fff; <br>
+        &emsp;border: 5px solid #000; <br>
+        &emsp;transition-property: width, background-color; <br>
+        &emsp;transition-duration: 1s, 3s; <br>
+        &emsp;transition-timing-function: linear, ease-in; <br>
+        &emsp;transition-delay: 3s, 0s; <br>
+        } <br>
+        <br>
+        div:hover { <br>
+        &emsp;width: 80%; <br>
+        &emsp;background-color: blue; <br>
+        }
+        </div>
+        <p>Kod nr 5:</p>
+          <div class="w3-code cssHigh">
+              div {<br>
+          &emsp;width: 50%;<br>
+         &emsp; height: 100px;<br>
+         &emsp; background-color: #fff;<br>
+        &emsp;  border: 5px solid #000;<br>
+        &emsp;  transition: width 1s linear 3s, background-color 3s ease-in 0s;<br>
+        }<br>
+<br>
+        div:hover {<br>
+        &emsp;  width: 80%;<br>
+       &emsp;   background-color: blue;<br>
+        }
+
+          </div>
+           <h3>Przykład praktycznego wykorzystania własności <i>transition</i> z pseudoelementem <i>:hover</i></h3>
+        Do tego przykładu użyjemy następującego kodu css:
+        <div class="w3-code cssHigh">
+                .button{ <br>
+    &emsp;background-color: lightblue;<br>
+    &emsp;width: 80px;<br>
+    &emsp;height: 20px;<br>
+    &emsp;padding: 10px;<br>
+    &emsp;text-align: center;<br>
+    &emsp;transition-duration: 2s;<br>
+}<br>
+<br>
+.button:hover{<br>
+    &emsp;background-color: blue;<br>
+}
+        </div>
+        <p>Dzięki pseudoelementowi <i>hover</i> efekt przejścia uaktywni się dopiero gdy najedziemy na dany element, dzięki niemu element płynnie zmienia kolor</p>
+        <h2>Animacje CSS</h2>
+        <p>Do prostych animacji wcale nie musimy uczyś się języka JavaScript, czy używać GIFów. Zwykły CSS oferuje nam kilka ciekawych rozwiązań, dzięki któym możemy ciekawie udekorować naszą stronę.</p>
+        <h3>Keyframes</h3>
+        <div class="w3-code cssHigh">
+                        @keyframes example { <br>
+                from {background-color: red;} <br>
+                to {background-color: yellow;}
+}
+        </div>
+        <p>Keyframes ustala nam jak element będzie się zmieniał w czasie. Na powyższym przykładzie widzimy, że tło elementu będzie się zmieniało z czerwonego na żółte. Spróbujmy stworzyć sobie element <b>div</b>. Najpierw kod css</p>
+        <div class="w3-code cssHigh">
+            div{ <br>
+            &emsp;width: 100px; <br>
+            &emsp;height: 100px; <br>
+            &emsp;background-color: red; <br>
+            &emsp;animation: example 5s infinite;
+            }
+        </div>
+        <p>Jak łatwo się było domyślić animacja polega na tym, że obrazek w ciągu 5 sekund zmienia kolor z czerwonego na żółty. Infinite, oznacza, że animacja będzie przebiegać bez przerwy. Element animation możemy rozbić na kilka mniejszych np:</p>
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th>animation-name:</th>
+                <td>nazwa animacji (z @keyframes)</td>
+            </tr>
+            <tr>
+                <th>animation-duration:</th>
+                <td>czas (w sekundach) trwania animacji</td>
+            </tr>
+            <tr>
+                <th>animation-delay:</th>
+                <td>"opóźnienie" animacji (w sekundach), czyli czas od wczytania strony po którym animacja się rozpocznie</td>
+            </tr>
+            <tr>
+                <th>animation-iteration-count:</th>
+                <td>ile razy animacja się wykona (wartość infinite sprawi, że będzie się wykonywać bez przerwy)</td>
+            </tr>
+            <tr>
+                <th>animation-direction:</th>
+                <td>
+                    <ul>
+                        <li><b>normal</b> - animacja przebiega normalnie</li>
+                        <li><b>reverse</b> - animacja przebiega w odwrotnej kolejności</li>
+                        <li><b>alternate</b> - animacja przebiega naprzemiennie najpierw normalnie, później w odwrotnej kolejności</li>
+                        <li><b>alternate-reverse:</b> - animacja przebiega naprzemiennie najpierw w odwrotnej kolejności, później normalnie </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>animation-timing-function:</th>
+                <td>
+                    <ul>
+                        <li><b>easy</b> - animacja najpierw działa wolno, potem szybciej i na końcu znowu zwalnia (domyślne)</li>
+                        <li><b>linear</b> - animacja ma cały czas to samo tempo</li>
+                        <li><b>ease-in</b> - animacja zaczyna się wolno a na końcu przyspiesza</li>
+                        <li><b>ease-out</b> - animacja zwalnia na końcu</li>
+                        <li><b>ease-in-out</b>- podobnie jak <b>easy</b>, ale pryspieszenia/zwolnienia są gwałtowniejsze</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>animation-fill-mode:</th>
+                <td><ul>
+                    <li><b>none</b> - domyślnie, nie będą używane żadne dodatkowe style przed i po animacji</li>
+                    <li><b>forwards</b> - element zachowa styl ostatniego etapu animacji</li>
+                    <li><b>backwards</b> - element otrzyma wartości stylu ustalone przez pierwszy etap aniamcji (w zależności od kierunku animacji) i zachowa je podczas opóźnienia animacji (animation-delay)</li>
+                    <li><b>both</b> - animacja rzestrzega zarówno <b>forwards</b> jak i <b>backwards</b></li>
+                </ul></td>
+            </tr>
+            <tr>
+                <th>animation-play-state:</th>
+                <td>
+                    <ul>
+                        <li><b>paused</b> - zatrzymuje animację</li>
+                        <li><b>running</b> - domyślna, zaczyna animację</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h3>Przebieg animacji</h3>
+        <p>W pierwszym przykładzie użyliśmy <b>from</b> i <b>to</b> aby określić jakie style przyjmuje animowany obiekt w czasie trwania animacji. Są również inne sposoby, aby to zrobić np. jeśli mamy więcej niż dwie</p>
+        <div class="w3-code cssHigh">
+                        @keyframes example { <br>
+                &emsp;0% {background-color: red;} <br>
+                &emsp;40% {background-color: blue;} <br>
+                &emsp;87% {background-color: green;} <br>
+                &emsp;100% {background-color: yellow;}
+}
+        </div>
+        <p>Jak widzimy kolory płynnie się zmieniają w czasie przebiegu animacji. Możemy sterować wartościami procentowymi i ilością różnych przejść</p>
+        <h3>Krzywa Bezier'a</h3>
+        <p>Ciekawa własność o której warto wiedzieć. Temat raczej jako ciekawostka więc odsyłam do dosyć treściwego <a href="http://webkod.pl/kurs-css/wartosci/funkcje/cubic-bezier">artykułu na ten temat</a></p>
+        <h3>Ambitniejszy przykład animacji</h3>
+        <p><a href="">Tutaj</a> znajdziecie link do kodu html generującego trochę bardziej rozbudowaną animację (animacja.html)</p>
+        <h3>Animista</h3>
+        <p>Isnieją oczywiście programy, które ułatwiają pracę z animacjami. Jednym z takich narzędzi jest strona <a href="http://animista.net/">animista.net</a>. Dzięki niej można w prost sposób stworzyć ciekawą animację i jej efekt wkleić do swojego kodu css. Posiada on zdecydowanie większe możliwości niż te które możemy uzyskać pisząc sami animacje, niemniej warto wiedzieć ja je tworzyć, aby w razie potrzeby potrafić edytować samemu kod, któy tworzy animista.</p>
+        <h3>Praca domowa</h3>
+        <h4>Zad 1</h4>
+        <p>Wykonaj drugą fazę tworzenia projektu - zbudowanie <b>szkieletu aplikacji</b> w HTML5. Każda większa zmiana powinna być wysłana jako osobny commit na repozytorium utworzone w pierwszej fazie. Czas na wykonanie zadania to dwa tygodnie. Katalog w którym będzie projekt proszę nazwać <b>PROJEKT</b>. Prosze pamiętać, aby główny plik nazywał się <b>index.html</b></p>
+        <h4>Zad 2</h4>
+        <p>Poszukaj informacji na temat właściwości <b>transform</b> i używając jej stwórz prosty preloader:</p>
+        <img src="../img/zaj2/prdom02.gif" alt="prdom2gif">
+        <p>Utwórz katalog o nazwie <b>ZAJ2</b> a w nim utwórz pliki <b>prdom.html</b> i <b>prdom.css</b>, w których umieścisz rozwiązanie tego zadania.  </p>
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
     <script>
         w3CodeColor();
+
     </script>
 </body>
 
