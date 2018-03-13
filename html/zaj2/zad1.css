@@ -1,13 +1,14 @@
-/*.button{
-    background-color: lightblue;
-    width: 80px;
-    height: 20px;
-    padding: 10px;
-    text-align: center;
-    transition-duration: 2s;
+div {
+    width: 50%;
+    height: 100px;
+    background-color: #fff;
+    border: 5px solid #000;
 }
 
-.button:hover{
+div:hover {
+    width: 80%;
     background-color: blue;
 }
-*/
+
+
+
