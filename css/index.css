@@ -41,6 +41,7 @@ fixed{
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
+    margin: 10px;
 }
 .tematy > a{
     text-decoration: none;
