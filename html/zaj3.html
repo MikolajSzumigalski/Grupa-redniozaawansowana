@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <a href="https://www.sealcode.org/"><img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;"></a>
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+    <div class="w3-container w3-li">
+        <h2>Wstęp</h2>
+        <p>Dla tych, którzy nie brali udziału w grupie początkującej polecam serdecznie zapoznać się z materiałami o Flexboxie i modelu pudełkowym. Link <a href="https://mikolajszumigalski.github.io/zaj8.html"><b>TUTAJ</b></a></p>
+        <h2>1. Przypomnienie wiadomości z pozycjonowania</h2>
+        <p>Do pozycjonowania używamy atrybutu <b>position</b>, który przyjmuje następujące wartości:</p>
+        <ul>
+            <li><b>static</b> wartość domyślna, elementy wyświetlają się po kolei jeden po drugim</li>
+            <li><b>absolute</b> element jest pozycjonowany względem jego pierwszego, nie statycznego przodka</li>
+            <li><b>fixed</b> element jest pozycjonowany względem przeglądarki</li>
+            <li><b>relative</b> element jest ustawiony względem jego normalnej pozycji i innych elementów</li>
+            <li><b>sticky</b> ciekawa własność, działa podobnie jak <b>fixed</b>, ponieważ jego położenie zależy od przeglądarki, ale jego pierwotne ułożenie możemy ustalić podobnie jak w <b>relative</b> </li>
+        </ul>
+        <h3>ZAD 1</h3>
+        <p>Przygotuj plik html o nazwie <b>cw3.html</b>. Umieść w nim element div będący jasnoszarym kwadratem o boku 600px, a w nim 4 elementy div, które będą kwadratami o boku 100px i miały różne kolory (na przykładach są standardowe kolory w tej kolejności: green, yellow, red i blue). Będziemy z nich korzystać w następnych zadaniach</p>
+        <a href="../img/zaj3/divstatic.png"><img class="w3-image" src="../img/zaj3/divstatic.png"></a>
+        <h2>2. Rozkład normalny</h2>
+        <p>W rozkładzie normalnym każdy element blokowy jest umieszczany poniżej poprzedniego. Jest to normalny sposób, w jaki przeglądarki traktują elementy HTML, nie musimy zaznaczać w CSS-ie, że elementy mają być tak rozmieszczane; można jednak to zrobić poprzez nadanie wartości static właściwości position.</p>
+        <h3>ZAD 2</h3>
+        <p>Sprawdź czy układ elementów zmienił się po dodaniu do div'ów <b>position: static</b>? Jak myślisz dlaczego? </p>
+        <h2>3. Umiejscawianie względne</h2>
+
+        <p>Umiejscawianie względne umożliwia przesuwanie elementów względem miejsca, w którym zostały umieszczone przy użyciu rozkładu normalnego.</p>
+        <h3>ZAD 3</h3>
+        <p>Za pomocą <b>position: relative</b> spróbuj odtworzyć poniższe ustawienie. Zastanów się jakie <b>position</b> powinien mieć szary kwadrat (niebieski kwadrat celowo wystaje poza szary jakby co)</p>
+        <a href="../img/zaj3/divzad3.png"><img class="w3-image" src="../img/zaj3/divzad3.png"></a>
+        <h2>4. Umiejscawianie bezwzględne</h2>
+        <p>Domyślnie, element HTML, do którego zostanie dodana właściwość <b>position: absolute;</b> nie pozostawia po sobie żadnej dodatkowej przestrzeni, dzięki czemu elementy, które go otaczały, nie reagują w żaden sposób na niego oraz na jego pozycję początkową.</p>
+        <p>Domyślnie, element wyświetlony z pozycji absolutnej będzie znajdował się w miejscu swojej pozycji początkowej, chyba że zmienimy to za pomocą właściwości CSS, które służą do ustalenia pozycji takiego elementu HTML, czyli za pomocą właściwości <b>top</b>, <b>right</b>, <b>bottom</b> lub <b>left</b>.</p>
+        <h3>ZAD 4</h3>
+        <p>Zamień elementom z poprzedniego zadania <b>position</b> na <b>absolute</b>. Co spowodowało, że ich układ drastycznie się zmienił. Względem czego elementy są ustawione? Czy <b>position</b> szarego kwadratu ma zanczenie?</p>
+        <h2>5. Umiejscawianie ustalone</h2>
+        <p>Umiejscawianie ustalone jest jednym z typów umiejscawiania bezwzględnego. W przypadku tego sposobu umiejscawiania położenie elementu jest ustalone względem okna przeglądarki. Kiedy przewijamy zawartość strony, element pozostaje w tym samym miejscu. Do określania miejsca w oknie przeglądarki, w którym zostanie umieszczony element, używane są poznane już właściwości przesunięcia.</p>
+        <h3>ZAD 5</h3>
+        <p>Ustaw wysokość szarego kwadratu na powiedzmy 2000px. Ustaw jednemu z pozostałych kwaratów <b>position</b> na <b>fixed</b> i zobacz jak się zachowuje względem przeglądarki</p>
+        <h2>6. Właściwość z-index</h2>
+        <p>W przypadku stosowania umiejscawiania innego niż rozkład normalny pudełka elementów mogą na siebie nachodzić. Wówczas element, który jest umieszczony bliżej końca dokumentu HTML, jest wyświetlany powyżej elementów wcześniejszych. Jeżeli zależy nam na kontroli wzajemnego przesłaniania różnych elementów, możemy to zrobić przy użyciu właściwości <b>z-index</b>. Wartościami tej właściwości są liczby, a im większa będzie jej wartość, tym „wyżej” element zostanie umieszczony. Właściwość <b>z-index</b> jest także czasami nazywana kontekstem stosu, gdyż bloki elementów mogą tworzyć stos wzdłuż osi Z.</p>
+        <h2>7. Opływanie elementów</h2>
+        <p>Właściwość <b>float</b> pozwala usunąć element z rozkładu normalnego strony i umieścić go możliwie jak najdalej na lewo lub prawo wewnątrz rodzica tego elementu. Cała pozostała treść umieszczona wewnątrz takiego rodzica będzie otaczała ten pływający element. W razie zastosowania właściwości <b>float</b> należy także określić szerokość elementu pływającego. Jeżeli tego nie zrobimy, wyniki uzyskiwane w różnych przeglądarkach mogą być niespójne; w efekcie element pływający najprawdopodobniej zajmie całą szerokość elementu, w którym został umieszczony (czyli tak, jakby był rozmieszczony w normalny sposób).</p>
+        <p>W wielu układach stron ich poszczególne elementy są wyświetlane jeden obok drugiego. Bardzo często w celu uzyskania takiego efektu używa się elementów pływających. W przypadku ich zastosowania ich wysokość może mieć znaczący wpływ na miejsce, w którym element zostanie umieszczony.</p>
+        <p>Korzystając z właściwości <b>clear</b>, możemy poinformować przeglądarkę, że żaden element (umieszczony wewnątrz tego samego rodzica) nie powinien się stykać z lewą/prawą krawędzią danego elementu. Właściwość ta przyjmuje wartości <b>left</b>, <b>right</b>, <b>both</b> oraz <b>none</b>.</p>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
