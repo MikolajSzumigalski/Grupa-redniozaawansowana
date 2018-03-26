@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <a href="https://www.sealcode.org/"><img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;"></a>
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+    <div class="w3-container w3-li">
+        <h2>1. Czym jest Java Script?</h2>
+        <p>JavaScript jest językiem programowania używanym w przeglądarkach internetowych po stronie klienta, który może wprowadzić element interakcji pomiędzy stroną ,a użytkownikiem. Jest to jedno z trzech narzędzi które każdy web deweloper powinien znać. (HTML, CSS, JS)</p>
+        <img class="w3-image" src="https://d2v4zi8pl64nxt.cloudfront.net/javascript-seo/5948abfc0e2df5.02876591.gif">
+
+        <h3 >Pamiętajmy! <b>(JavaScript !== Java) === True!</b></h3>
+        <h3 class="w3-card-4 w3-padding">*Czym jest ES? <a href="https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c">(link)</a> Krótki artykuł dla ciekawych (ANG 3min)</h3>
+        <h2>2. Podstawowa składnia</h2>
+        <p>Podstawowa składnia JS-a została już przedstawiona podczas <a href="https://mikolajszumigalski.github.io/zaj10.html">warsztatów w grupie początkującej</a>, tam też odsyłam po materiały na ten temat.</p>
+        <p>Tutaj można znaleźć dużo przydatnych informacji:</p>
+        <ul class="w3-ul w3-border w3-card-number-4 w3-hoverable">
+            <li><a href="https://developer.mozilla.org">Mozilla Developer Network</a></li>
+            <li><a href="https://www.w3schools.com/Js/">w3shools</a></li>
+        </ul>
+        <h2>3. JS i HTML</h2>
+        <p>Do wprowadzenia skrytpu na strone możemy użyć HTML-owych tagów <i>script</i> w następujący sposób:</p>
+        <a href="../img/zaj4/zdj_1.png"><img class="w3-image" src="../img/zaj4/zdj_1.png"></a>
+        <p>można też podpiąć nasz kod w ramach osobnego pliku</p>
+        <a href="../img/zaj4/zdj_2.png"><img class="w3-image" src="../img/zaj4/zdj_2.png"></a>
+        <h2>4. Funkcje</h2>
+        <p>Na początek będą nas interesowały dwa sposoby zdefiniowania funkcji - <b>anonymous function</b> oraz <b>named function</b>:</p>
+        <a href="../img/zaj4/zdj_3.png"><img class="w3-image" src="../img/zaj4/zdj_3.png"></a>
+        <h2>5. Tablice i Obiekty</h2>
+        <p>Przykład 1:</p>
+        <a href="../img/zaj4/zdj_6.png"><img class="w3-image" src="../img/zaj4/zdj_6.png"></a>
+        <p>Przykład 2:</p>
+        <a href="../img/zaj4/zdj_7.png"><img class="w3-image" src="../img/zaj4/zdj_7.png"></a>
+        <h3>Zadanie X.1</h3>
+        <p>Skopiuj tablicę z pliku <a href="../img/zaj4/koty">koty</a> do swojego skryptu, następnie napisz funkcję która wypisze n pierwszych rekordów z owej tablicy (n bedzie parametrem funkcji), w formie &lt;Imię kota> - &lt;poziom słodkości> \n &lt;link> (znaki "
+            < " oraz ">" pomijamy). Jeśli przekazane do funkcji n będzie zbyt duże, należy wypisać odpowiedni komunikat.</p>
+        <p>Przykład:</p>
+        <a href="../img/zaj4/zdj_8.png"><img class="w3-image" src="../img/zaj4/zdj_8.png"></a>
+        <h3>Zadanie X.2</h3>
+        <p>Tym razem skopiuj tablicę z pliku <a href="../img/zaj4/troche_inne_koty">troche_inne_koty</a>, następnie napisz funkcję która zachowa się tak samo jak funkcja z poprzedniego zadania. Czym plik koty.txt się różni od troche_inne_koty.txt?</p>
+        <h3>Zadanie X.3</h3>
+        <p>Napisz funkcję która przyjmuje parametry <b>s</b> i <b>n</b>, gdzie s to pewien string a n to dodatnia liczba całkowita, funkcja powinna wypisać w konsoli słowo n, s razy, co drugi wyraz ma być pisany od tyłu, a co trzeci samymi wielkimi literami.</p>
+        <p>Przykład:</p>
+        <a href="../img/zaj4/zdj_5.png"><img class="w3-image" src="../img/zaj4/zdj_5.png"></a>
+        <h2>6. Zadanie Domowe!</h2>
+        <h3>Filtr.</h3>
+        <p>Napisz funkcję, która jako parametry przyjmuje inną funkcję f(zał. zwracającą tylko True lub False) oraz oraz tablicę a.</p>
+        <p>Funkcja ma zwracać nową tablicę w której znajdą się te elementy z a, dla których funkcja f zwróciła True.</p>
+        <p>Przykład:</p>
+        <a href="../img/zaj4/zdj_9.png"><img class="w3-image" src="../img/zaj4/zdj_9.png"></a>
+        <p>Źródła:</p>
+        <a href="https://developer.mozilla.org">https://developer.mozilla.org</a>
+        <a href="https://www.w3schools.com/Js">https://www.w3schools.com/Js</a>
+
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
