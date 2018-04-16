@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <a href="https://www.sealcode.org/"><img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;"></a>
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+    <div class="w3-container w3-li">
+        <h2>Czym jest DOM?</h2>
+        <p>DOM - Document Object Model</p>
+        <h4>Moje wyjaśnienie:</h4>
+        <p>DOM przedstawia stronę internetową jako ustrukturyzowane drzewo węzłów, którymi możemy manipulować za pomocą np. JS-a</p>
+        <h4>Lepsze wyjaśnienie:</h4>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></p>
+        <p><a href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM/Wprowadzenie">TO samo ale po polsku</a></p>
+        <img class="w3-image" src="https://www.w3schools.com/js/pic_htmltree.gif">
+        <p>Jeśli chcemy podejrzeć jak wygląda DOM na naszej stronie, możemy użyć <a href="https://software.hixie.ch/utilities/js/live-dom-viewer/"><b> DOM Viewer </b></a> lub zanurkować w narzędzia developerskie w naszej przeglądarce!</p>
+        <h2>2. JS i DOM</h2>
+        <h3>Do pozyskania elementu lub elementów DOM-u używamy:</h3>
+        <p>document.<b>getElementById</b>("id")</p>
+        <p>document.<b>getElementsByTagName</b>("tag")</p>
+        <p>document.<b>getElementsByClassName</b>("class")</p>
+        <h3>Elementy możemy tworzyć, dodawać i usuwać:</h3>
+        <p>document.<b>createElement</b>(element)</p>
+        <p>document.<b>removeChild</b>(element)</p>
+        <p>document.<b>appendChild</b>(element)</p>
+        <p>document.<b>replaceChild</b>(element)</p>
+        <h3>Zmiana atrybutów i stylów:</h3>
+        <p>element.<b>attribute</b> = new value</p>
+        <p>element.<b>style.property</b> = new style</p>
+        <h4>Przykład:</h4>
+        <img class="w3-image" src="../img/zaj5/4.png">
+        
+        <h3>Zadanie 5.1</h3>
+        
+        <p>Pobierz plik <a href="../img/zaj5/input.txt">input.html</a>, uzupełnij funkcje <b>save_inputs()</b> w taki sposób by po jej wywołaniu
+            do listy <b>&lt;ul></b> został dodany nowy element <b>&lt;li></b> z zawartością pól <b>#input_1</b> i <b>#input_2</b></p>
+        <img class="w3-image" src="../img/zaj5/1.png">
+        <h2>3. DOM Events</h2>
+        <p>Eventy generowane przez DOM możemy obsługiwać na dwa sposoby:</p>  
+        <h3>- event listener</h3>  
+        
+        <p>element.<b>addEventListener</b>(type, handler, options)</p>
+        <p><b>type</b> - typ eventu który chcemy obsłużyć</p>
+        <p><b>handler</b> - funkcja która zostanie wywołana</p>
+        <p><b>options</b> - dodatkowe opcje</p>
+        <img class="w3-image" src="../img/zaj5/2.png">
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Dostępne typy eventów</a> </p>
+        <h3>- on-events</h3>
+        <p>Element DOM-u może posiadać specjalne pola które służą do obsługiwania
+określonych eventów, np. onclick, onkeypress, onfocus ...
+</p>
+     <img class="w3-image" src="../img/zaj5/3.png">
+     <h2>Zadanie 5.3</h2>
+     <p>Stwórz prostą stronę na której będzie znajdował się czerwony kwadrat 200px x 200px (zwyczajny div).
+Dodając odpowiedni event spraw że po każdym kliknięciu kwadrat zmieni swój kolor.</p>
+   <h2>Zadanie 5.3.1*</h2>
+   <p>Zwiększ ilość kwadratów, każdemu przypnij event który sprawi że po najechaniu myszką kolor danego kwadratu
+się zmieni.</p>
+   <h3>Zadanie DOMowe</h3>
+        <p>Stwórz stronę na której zostaną wstawione zdjęcia wszystkich kotków znajdujących się w tablicy w pliku <a href="../img/zaj5/koty.txt">koty.txt</a>.
+Po kliknięciu na zdjęcie kota powinien wyskoczyć alert (window.alert()) z jego imieniem oraz poziomem słodkości.</p>
+   <h3>Praca domowa dotycząca projektu</h3>
+   <p>Prosiłbym o dodanie do Waszych projektów arkusza stylów czyli css. Macie na to dwa tygodnie.</p>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
