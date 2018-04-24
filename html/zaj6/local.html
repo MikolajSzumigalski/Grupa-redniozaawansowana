@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local storage</title>
+</head>
+<body>
+    Wpisz tekst: <input id="localinput"type="text">
+    <button id="localbtn">Wyślij do local storage</button><br>
+    Wpisz tekst: <input id="sessioninput"type="text">
+    <button id="sessionbtn">Wyślij do session storage</button>
+<script>
+    var counterlocal = 0;
+    var countersession = 0;
+    document.getElementById("localbtn").addEventListener("click", function(){
+        localStorage.setItem(counterlocal,document.getElementById("localinput").value);
+        counterlocal++;
+    });
+    document.getElementById("sessionbtn").addEventListener("click", function(){
+        sessionStorage.setItem(countersession,document.getElementById("sessioninput").value);
+        countersession++;
+    });
+</script>
+</body>
+</html>

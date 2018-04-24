@@ -18,27 +18,23 @@
     </h1>
     <div class="w3-container w3-li">
         <h2>Timing Events</h2>
-        <p>Poprzez obiekt window mamy dostęp do metod które umożliwiają egzekucję kodu w określonym przez nas czasie,
-są to:</p>
-   <p><b>window.setTimeout(funkcja, milisekundy, args)</b>, która wykona określoną funkcję po upływie danej liczby milisekund.</p>
-   <p>oraz</p>
-   <p><b>window.setInterval(funkcja, milisekundy, args)</b>, która wykona określoną funkcję co określoną liczbę milisekund.</p>
-   <p>Przykłady użycia:</p>
-   <img class="w3-image" src="../img/zaj6/img_1.png">
-   <p>Obydwie metody zwracają ID, który pozwala nam zatrzymać timer. Do zatrzymywania timera używamy:</p>
-   <p><b>window.clearTimeout(timerID)</b></p>
-   <p>oraz</p>
-   <p><b>window.clearInterval(timerID)</b></p>
-   <h3>Zadanie 1</h3>
-   <p>Przygotuj prostą stronę wyświetlającą czerwony kwadrat 200px x 200px.
-Dodaj do strony guzik którego aktywacja sprawi, że po dwóch sekundach kwadrat zmieni kolor.</p>
-   <h3>Zadanie 2</h3>
-   <p>Spraw by po wciśnięciu guzika kolor zmieniał się co sekundę, dodaj drugi guzik który sprawi,
-że kolor już nie będzie się zmieniał.</p>
-   <h3>Zadanie 2.1*</h3>
-   <p>Dodaj ostateczne ulepszenie, którym będzie jakiś sposób regulowania częstotliwości zmiany koloru przez użytkownika,
-można wykorzystać np. tag &lt;input>.</p>
-  <h2>Obiekt Date</h2>
+        <p>Poprzez obiekt window mamy dostęp do metod które umożliwiają egzekucję kodu w określonym przez nas czasie, są to:</p>
+        <p><b>window.setTimeout(funkcja, milisekundy, args)</b>, która wykona określoną funkcję po upływie danej liczby milisekund.</p>
+        <p>oraz</p>
+        <p><b>window.setInterval(funkcja, milisekundy, args)</b>, która wykona określoną funkcję co określoną liczbę milisekund.</p>
+        <p>Przykłady użycia:</p>
+        <img class="w3-image" src="../img/zaj6/img_1.png">
+        <p>Obydwie metody zwracają ID, który pozwala nam zatrzymać timer. Do zatrzymywania timera używamy:</p>
+        <p><b>window.clearTimeout(timerID)</b></p>
+        <p>oraz</p>
+        <p><b>window.clearInterval(timerID)</b></p>
+        <h3>Zadanie 1</h3>
+        <p>Przygotuj prostą stronę wyświetlającą czerwony kwadrat 200px x 200px. Dodaj do strony guzik którego aktywacja sprawi, że po dwóch sekundach kwadrat zmieni kolor.</p>
+        <h3>Zadanie 2</h3>
+        <p>Spraw by po wciśnięciu guzika kolor zmieniał się co sekundę, dodaj drugi guzik który sprawi, że kolor już nie będzie się zmieniał.</p>
+        <h3>Zadanie 2.1*</h3>
+        <p>Dodaj ostateczne ulepszenie, którym będzie jakiś sposób regulowania częstotliwości zmiany koloru przez użytkownika, można wykorzystać np. tag &lt;input>.</p>
+        <h2>Obiekt Date</h2>
         <p>Gdy mamy utworzony obiekt typu <b>Date</b>, wymienione poniżej metody pozwalają na pobranie lub ustawienie daty i godziny przedstawianej przez dany obiekt:</p>
         <ul>
 
@@ -73,20 +69,16 @@ można wykorzystać np. tag &lt;input>.</p>
             <li><b>trim()</b> - metoda, która usuwa znaki odstępu na początku i końcu ciągu tekstowego</li>
             <li><b>replace()</b> - metoda, która działa podobnie jak funkcja typu “znajdź i zamień”. Pobiera wartość do znalezienia oraz wartość zastępującą (domyślnie zastąpienie wartości następuje tylko dla pierwszego znalezionego dopasowania)</li>
         </ul>
-    <h3>Zad 4</h3>
+        <h3>Zad 4</h3>
         <p>Mamy do dyspozycji zmienną <b>var</b> sentence = “ Home sweet home “;. Dla strony o kodzie źródłowym z zad 3 zastąp treść elementu o identyfikatorze paragraph-one następującą treścią:</p>
-        <p class="w3-panel w3-leftbar">Nasz ciąg ma długość: ... .<br>
-Jeśli zmienimy wszystkie znaki na wielkie ciąg będzie wyglądać tak: ... .<br>
-Na 10. pozycji znajduje się znak: ... . <br>
-Ciąg 'ee' znajduje się na miejscu: ... .<br>
-Ostatni indeks znaku 'e' to: ... .<br>
-Znaki od 8 do 14 to: ... .<br>
-Po usunięciu niepotrzebnych spacji nasz ciąg wygląda tak: ... .<br>
-Po zmianie 'me' na 'w' nasz ciąg wygląda tak: ... .</p>
-   <p>Sources:
-       <a href="https://www.w3schools.com/js/js_timing.asp">https://www.w3schools.com/js/js_timing.asp</a> <br>
-       <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a><br>
-       <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout</a></p>
+        <p class="w3-panel w3-leftbar">Nasz ciąg ma długość: ... .<br> Jeśli zmienimy wszystkie znaki na wielkie ciąg będzie wyglądać tak: ... .<br> Na 10. pozycji znajduje się znak: ... . <br> Ciąg 'ee' znajduje się na miejscu: ... .<br> Ostatni indeks znaku 'e' to: ... .<br> Znaki od 8 do 14 to: ... .<br> Po usunięciu niepotrzebnych spacji nasz ciąg wygląda tak: ... .<br> Po zmianie 'me' na 'w' nasz ciąg wygląda tak: ... .</p>
+        <h2>Local storage i session storage</h2>
+        <p>Oba mają podobny cel - przechowywanie informacji użytkownika, ale po jego stronie. Nie są to dane trwale zapisane, to jak długo można z nich korzystać zależy od użytkownika - dane zapisane w session storage usuwają się po zamknięciu karty (i są dostępne ogólnie tylko dla jednej karty), zaś dane z local storage są tak długo aż ich nie usuniemy (i dzielą się z innymi kartami danej witryny)</p>
+        <img class="w3-image" src="../img/zaj6/img_2.png">
+        <p>Sources:
+            <a href="https://www.w3schools.com/js/js_timing.asp">https://www.w3schools.com/js/js_timing.asp</a> <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a><br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout</a></p>
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
