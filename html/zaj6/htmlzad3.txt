@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Przykłady i ćwiczenia</title>
+	</head>
+	<body>
+		<h1 id="heading-one">Przykładowy nagłówek 1</h1>
+		<p id="paragraph-one">To jest przykład strony, która została zrobiona przy pomocy JS</p>
+		<span id="span-one">Uczymy się języka JavaScript.</span>
+		<br />
+		<p id="paragraph-two">Język JavaScript nie jest taki trudny.</p>
+		<span id="span-two">Czas trwania zajęć: 90 minut.</span>
+		<p id="paragraph-three">Technologie webowe</p>
+	</body>
+</html>

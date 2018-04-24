@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <a href="https://www.sealcode.org/"><img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;"></a>
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+    <div class="w3-container w3-li">
+        <h2>Timing Events</h2>
+        <p>Poprzez obiekt window mamy dostęp do metod które umożliwiają egzekucję kodu w określonym przez nas czasie,
+są to:</p>
+   <p><b>window.setTimeout(funkcja, milisekundy, args)</b>, która wykona określoną funkcję po upływie danej liczby milisekund.</p>
+   <p>oraz</p>
+   <p><b>window.setInterval(funkcja, milisekundy, args)</b>, która wykona określoną funkcję co określoną liczbę milisekund.</p>
+   <p>Przykłady użycia:</p>
+   <img class="w3-image" src="../img/zaj6/img_1.png">
+   <p>Obydwie metody zwracają ID, który pozwala nam zatrzymać timer. Do zatrzymywania timera używamy:</p>
+   <p><b>window.clearTimeout(timerID)</b></p>
+   <p>oraz</p>
+   <p><b>window.clearInterval(timerID)</b></p>
+   <h3>Zadanie 1</h3>
+   <p>Przygotuj prostą stronę wyświetlającą czerwony kwadrat 200px x 200px.
+Dodaj do strony guzik którego aktywacja sprawi, że po dwóch sekundach kwadrat zmieni kolor.</p>
+   <h3>Zadanie 2</h3>
+   <p>Spraw by po wciśnięciu guzika kolor zmieniał się co sekundę, dodaj drugi guzik który sprawi,
+że kolor już nie będzie się zmieniał.</p>
+   <h3>Zadanie 2.1*</h3>
+   <p>Dodaj ostateczne ulepszenie, którym będzie jakiś sposób regulowania częstotliwości zmiany koloru przez użytkownika,
+można wykorzystać np. tag &lt;input>.</p>
+  <h2>Obiekt Date</h2>
+        <p>Gdy mamy utworzony obiekt typu <b>Date</b>, wymienione poniżej metody pozwalają na pobranie lub ustawienie daty i godziny przedstawianej przez dany obiekt:</p>
+        <ul>
+
+            <li><b>getDate(), setDate()</b> - zwraca lub ustawia dzień miesiąca</li>
+            <li><b>getDay()</b> - zwraca dzień tygodnia (od 0 do 6)</li>
+            <li><b>getFullYear(), setFullYear()</b> - zwraca lub ustawia rok (4 cyfry)</li>
+            <li><b>getHours(), setHours()</b> - zwraca lub ustawia godzinę (od 0 do 23)</li>
+            <li><b>getMilliseconds(), setMilliseconds()</b> - zwraca lub ustawia milisekundy (od 0 do 999)</li>
+            <li><b>getMinutes(), setMinutes()</b> - zwraca lub ustawia minuty (od 0 do 59)</li>
+            <li><b>getMonths(), setMonths()</b> - zwraca lub ustawia miesiąc (od 0 do 11)</li>
+            <li><b>getSeconds(), setSeconds()</b> - zwraca lub ustawia sekundy (od 0 do 59)</li>
+            <li><b>getTime(), setTime()</b> - liczba milisekund, które upłynęły od 1 stycznia 1970 roku, 00:00:00 UTC; dla daty sprzed podanego dnia wartość jest ujemna</li>
+            <li><b>getTimezoneOffset()</b> - zwraca wyrażone w minutach przesunięcie strefy czasowej dla bieżącej lokalizacji</li>
+            <li><b>toDateString()</b> - zwraca datę w postaci ciągu tekstowego</li>
+            <li><b>toTimeString()</b> - zwraca godzinę w postaci ciągu tekstowego</li>
+            <li><b>toString()</b> - zwraca ciąg tekstowy przedstawiający wskazaną datę</li>
+        </ul>
+        <h3>Zad 3</h3>
+        <p>Uzupełnij luki (tzn. co wstawić w miejsce ‘???’) w <a href="zaj6/jszad3.txt">poniższym skrypcie języka JavaScript</a> tak, aby na stronie o <a href="zaj6/htmlzad3.txt">poniższym kodzie źródłowym</a> treść elementu o identyfikatorze paragraph-three została zastąpiona przez komunikat znadujący się pod skryptem JS?</p>
+        <h2>Obiekt String</h2>
+        <p>W przypadku wartości będącej ciągiem tekstowym można użyć własciwości i metody obiektu String:</p>
+        <ul>
+
+            <li><b>length</b> - właściwość, która przechowuje liczbę znaków znajdujących się w ciągu tekstowym</li>
+            <li><b>toUpperCase()</b> - metoda, która zmienia małe znaki na duże</li>
+            <li>toLowerCase() - metoda, która zmienia duże znaki na małe</li>
+            <li><b>charAt()</b> - metoda, która pobiera numer indeksu jako parametr, a następnie zwraca znak znajdujący się we wskazanym położeniu</li>
+            <li><b>indexOf()</b> - metoda, która zwraca numer indeksu pierwszego znaku lub zbioru znaków</li>
+            <li><b>lastIndexOf()</b> - metoda, która zwraca numer indeksu ostatniego znaku lub zbioru znaków</li>
+            <li><b>substring()</b> - metoda, która zwraca znaki znalezione między dwoma indeksami, przy czym znak znajdujący się w położeniu wskazywanym przez pierwszy indeks jest dołączony, natomiast znak wskazywany przez drugi indeks nie jest dołączony</li>
+            <li><b>split()</b> - metoda, która po podaniu znaku powoduje podział ciągu tekstowego w każdym miejscu wystąpienia danego znaku, a następnie poszczególne elementy przechowuje w tablicy</li>
+            <li><b>trim()</b> - metoda, która usuwa znaki odstępu na początku i końcu ciągu tekstowego</li>
+            <li><b>replace()</b> - metoda, która działa podobnie jak funkcja typu “znajdź i zamień”. Pobiera wartość do znalezienia oraz wartość zastępującą (domyślnie zastąpienie wartości następuje tylko dla pierwszego znalezionego dopasowania)</li>
+        </ul>
+    <h3>Zad 4</h3>
+        <p>Mamy do dyspozycji zmienną <b>var</b> sentence = “ Home sweet home “;. Dla strony o kodzie źródłowym z zad 3 zastąp treść elementu o identyfikatorze paragraph-one następującą treścią:</p>
+        <p class="w3-panel w3-leftbar">Nasz ciąg ma długość: ... .<br>
+Jeśli zmienimy wszystkie znaki na wielkie ciąg będzie wyglądać tak: ... .<br>
+Na 10. pozycji znajduje się znak: ... . <br>
+Ciąg 'ee' znajduje się na miejscu: ... .<br>
+Ostatni indeks znaku 'e' to: ... .<br>
+Znaki od 8 do 14 to: ... .<br>
+Po usunięciu niepotrzebnych spacji nasz ciąg wygląda tak: ... .<br>
+Po zmianie 'me' na 'w' nasz ciąg wygląda tak: ... .</p>
+   <p>Sources:
+       <a href="https://www.w3schools.com/js/js_timing.asp">https://www.w3schools.com/js/js_timing.asp</a> <br>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a><br>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout</a></p>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
