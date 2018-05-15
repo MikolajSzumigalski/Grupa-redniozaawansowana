@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<title>Zajęcia nr 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+
+<body>
+    <h1 class="w3-theme-d3 w3-padding-16">
+        <div class="w3-row">
+            <div class="w3-col-m3">
+                <a href="https://www.sealcode.org/"><img src="../img/logo2.png" width="150" class="w3-left " style="padding-left: 10px;"></a>
+            </div>
+            <div class="w3-col-m9">Warsztaty Webowe grupa średniozaawansowana</div>
+        </div>
+    </h1>
+     <div class="w3-container w3-li">
+         <h2>Czym jest protokół HTTP (ang. <i>Hypertext Transfer Protocol</i>)?</h2>
+         <p>Jak wszyscy dobrze wiemy wiele dziedzin szczególnie informatycznych może być rozwijanych równolegle przed różne osoby/firmy itp. Przykładowo przez to, że na świecie są różne języki nie dogadamy się mówiąc po polsku z np. Japończykiem, oraz ładowarką do Iphona nie podładujemy naszego LG-ka (a przynajmniej tak mi się wydaje). I po to aby nie było bajzlu w kwestiach stron internetowych powstał pewien <b>standard</b>, czyli <b>zadady</b> wg których <b>klienci</b> czyli np. użytkownicy komputerów (a bardziej nawet same przeglądarki internetowe z których korzystają) współpracują z <b>serwerami</b> </p>
+         <p>Ok, to był najogólniejszy wstęp jaki można było zrobić. Ale czego dokładnie dotyczą te standardy? Żeby na to pytanie odpowiedzieć trzeba najpierw zrozumieć jak działa współpraca <b>klient - serwer</b>. Wygląda to mniej więcej tak - klient wysyła do serwera <b>żądanie</b>. Czego ten roszczeniowiec się domaga? Szeroko rozumianych <b>zasobów</b> czyli <i>obrazków (np. memów)</i>, <i>stron internetowych</i>, czy <i>kodu JavaScript</i></p>
+         <p>Rolą naszego HTTP jest określenie <b>sposobu</b> w jaki klient może dostać się do zasobu. Każdy zasób ma swoje <b>id</b>, które nazywamy <b>URI</b> (ang. <i>Uniform Resource Identifier)</i></p>
+         <p>Protokół HTTP dokładnie określa <b>format</b> komunikacji pomiędzy klientami i serwerami. Komunikacja ta oparta jest na wspomnianych już żądaniach i odpowiedziach. Protokół HTTP określa format tych wiadomości.</p>
+         <p>Protokół HTTP jest <b>bezstanowy</b>. Oznacza to tyle, że każde zapytanie może być interpretowane w oderwaniu od pozostałych.</p>
+         <h2>URL</h2>
+         <p>Ktoś kto wcześniej nie interesował się i nie wie nic o protokołach mógł sobie pomyśleć - co on gada o jakimś URI, to nie był czasem URL? Literówka jak zwykle? Otóż <u>nie tym razem</u>. Aczkolwiek te 2 pojęcia są silnie ze sobą powiązane. <b>URL</b> (ang. <i>Uniform Resource Locator</i>) jest <b>podzbiorem</b> URI. URI trktujemy jako zwykłe ID, nie wgłębiając się w znaczenie poszczególnych znaków - po prostu ma być unikalny i tyle. URL jest przydatniejszy, bo zawiera też informację o "miejscu" w jakim znajduje się dany zasób.</p>
+         <p>Adres URL ma postać:</p>
+         <div class="w3-panel w3-indigo"><p>scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]</p></div>
+         <p>Przykładowy adres URL może wyglądać następująco:</p>
+         <div class="w3-panel w3-indigo"><p>http://szumimajster:tajne@www.warsztatysealcode.pl:80/nie/ma/tej?strony=1#identyfikator</p></div>
+         <p>Rozkładając to na czynniki pierwsze i wyjaśniając:</p>
+         <table class="w3-table-all">
+             <tr>
+                 <th>Część adresu</th>
+                 <th>Przykładowa wartość</th>
+             </tr>
+             <tr>
+                 <th>scheme</th>
+                 <td>http</td>
+             </tr>
+              <tr>
+                 <th>user</th>
+                 <td>szumimajster</td>
+             </tr>
+              <tr>
+                 <th>password</th>
+                 <td>tajne</td>
+             </tr>
+              <tr>
+                 <th>host</th>
+                 <td>www.warsztatysealcode.pl</td>
+             </tr>
+              <tr>
+                 <th>port</th>
+                 <td>80</td>
+             </tr>
+              <tr>
+                 <th>/path</th>
+                 <td>/nie/ma/tej</td>
+             </tr>
+              <tr>
+                 <th>?query</th>
+                 <td>?strony=1</td>
+             </tr>
+              <tr>
+                 <th>#fragment</th>
+                 <td>#identyfikator</td>
+             </tr>
+         </table>
+    <h3>scheme</h3>
+         <p>W praktyce ta część adresu używana jest do określenia protokołu, najczęściej zobaczysz tu <b>http</b> czy <b>https</b>. W uproszczeniu można powiedzieć, że HTTPS (ang. Hypertext Transfer Protocol Secure) jest rozszerzeniem protokołu HTTP. To rozszerzenie pozwala na szyfrowanie połączenia pomiędzy klientem a serwerem.</p>
+    <h3>user:password</h3>
+         <p><i>user:password</i> służą do uwierzytelniania. Uwierzytelnianie to proces, który polega na udowodnieniu, że klient wysyłający dane żądanie jest tym za kogo się podaje. Mechanizmu uwierzytelniania używasz praktycznie w każdym serwisie gdzie masz założone konto.</p>
+         <p>W tym przypadku nazwa użytkownika i hasło przesyłane są jako część URL. Nie jest to bezpieczne w przypadku używania protokołu HTTP. Nawet przy komunikacji protokołem HTTPS adres URL może być zapamiętany przez przeglądarkę. Daje to możliwość przechwycenia nazwy użytkownika i hasła. W związku z tym nie jest to bezpieczny sposób na przesyłanie hasła czy nazwy użytkownika i należy go unikać.</p>
+    <h3>host</h3>
+    <p>
+        W przypadku protokołu HTTP sprowadza się to do nazwy domeny internetowej lub adresu IP.
+    </p>
+    <h3>port</h3>
+    <p>Port to numer. Numer ten jest wykorzystywany przez serwer. Serwer nasłuchuje ruch na danym porcie. To tak jak z numerem w bloku, domena do numer klatki a port to numer mieszkania</p>
+    <p>Protokoły mają swoje standardowe porty. Na przykład standardowym portem protokołu HTTP jest 80. Protokół HTTPS natomiast używa portu 443. W praktyce, ze względu na domyślne wartości, porty te często się pomija. Odpowiednia wartość pola scheme pozwala na określenie czy użytkownikowi chodzi o port 80 czy 443.</p>
+    <p>Możesz także uruchomić serwer, który nasłuchuje na innym porcie. Przykładem może tu być Tomcat, który domyślnie uruchamia się na porcie 8080. W takim przypadku podanie portu jest konieczne.</p>
+    <b>path i query</b>
+         <p><u>path</u> to oczywiście ścieżka do zasobu, a <u>query</u> to dodatkowe dane identyfikujące zasób</p>
+    <b>#fragment</b>
+    <p>Ostatnia część adresu URL. W praktyce wykorzystywana jest do określenia fragmentu strony HTML (a konkretnie do el. o danym ID znajdującym się na stronie), która powinna zostać pokazana użytkownikowi.</p>
+    <h2>Przykład curl</h2>
+         <p>Link do pobrania: <a href="https://curl.haxx.se/download.html">https://curl.haxx.se/download.html</a></p>
+         <p>Tutorial do instalacji: <a href="https://www.youtube.com/watch?v=qlTVMuONazs">https://www.youtube.com/watch?v=qlTVMuONazs</a> </p>
+    <p>Zobaczmy działanie curla na przykładzie, wpiszcie do konsoli:<br><b>curl -v https://api.github.com/users/MikolajSzumigalski</b></p>
+    <p>Szczególnie będzie nas interesować część po "gwiazdkach"</p>
+    <h2>Przykład POSTMAN</h2>
+    <p>Postmana można ściągnąć <a href="https://www.getpostman.com/">stąd</a>. Będziemy go testować podobnie jak poprzedni przykład, ale bardziej go omówimy na żywo</p>
+    <h2>Przykład HTTPie</h2>
+    <p>Można go ściągnąć, ale my go pokażemy w wersji online <a href="https://httpie.org/run">https://httpie.org/run</a></p>
+    <h2>Czasowniki HTTP</h2>
+    <p>Specyfikacja HTTP definiuje 8 czasowników. Każdy z tych czasowników powiązany jest z żądaniem wysyłanym przez klienta. Każde z żądań ma swoje zastosowania.</p>
+    <h3>GET</h3>
+         <p>Jest to podstawowe żądanie. Każde otworzenie strony internetowej zaczyna się od zapytania typu <b>GET</b>. Przeglądarka wysyła żądanie typu GET żeby otworzyć stronę internetową. Specyfikacja mówi, że żądanie to służy do pobrania aktualnej reprezentacji zasobu. W praktyce może to oznaczać pobranie aktualnej wersji strony znajdującej się pod danym adresem. Zakłada się, że żądania typu <b>GET</b> nie posiadają dołączonego ciała wiadomości.</p>
+    <h3>HEAD</h3>
+         <p>Zapytanie typu <b>HEAD</b> jest podobne do GET. Różni się jednym ważnym szczegółem. W przypadku tego zapytania odpowiedź serwera nie może zawierać ciała wiadomości. Zapytania tego typu są używane do sprawdzenia czy dany zasób się zmienił, czy do sprawdzania poprawności odnośników. Zysk z używania tego zapytania polega na tym, że ciało wiadomości nie jest przesyłane. Wyobraź sobie plik PDF, który zawiera 10MB danych. Można wysłać zapytanie typu <b>HEAD</b>, żeby sprawdzić czy zawartość tego pliku uległa zmianie. To czy plik jest nowszy można określić na podstawie nagłówków, które będą dołączone do odpowiedzi.</p>
+    <h3>POST</h3>
+         <p>Specyfikacja mówi, że żądania typu <b>POST</b> są przetwarzane przez serwer zgodnie z założeniami dla danego zasobu. Taki skomplikowany opis sprowadza się do:</p>
+         <ul>
+             <li>używania POST do przesyłania zawartości formularzy,</li>
+             <li>dodawania nowego zasobu,</li>
+             <li>dodawanie danych do istniejącego zasobu.</li>
+         </ul>
+    <h3>PUT</h3>
+         <p>W codziennym użytkowaniu żądania typu <b>PUT</b> służą do aktualizacji danego zasobu. Zgodnie ze specyfikacją ciało wiadomości powinno posłużyć do ustawienia stanu zasobu na serwerze. Zatem w przypadku gdy zasób nie istniał żądanie tego typu powinno go utworzyć. Jeśli zasób istnieje wówczas jego stan powinien być ustawiony na ten przekazany w ciele wiadomości.</p>
+    <p>W większości znanych mi przypadków ten pierwszy aspekt jest pomijany, prawdopodobnie dla uproszczenia logiki aplikacji.</p>
+    <p>Główna różnica pomiędzy zapytaniami POST i PUT polega na sposobie interpretowania ciała wiadomości. W przypadku zapytania typu POST to zasób decyduje jak przetworzyć otrzymaną wiadomość. W przypadku żądania typu PUT otrzymana wiadomość powinna posłużyć do ustawienia wartość zasobu.</p>
+    <h3>DELETE</h3>
+         <p>Zapytania tego typu służą do usuwania zasobów. Na przykład w którymś z wcześniejszych zapytań dany zasób może być utworzony przy pomocy żądania typu POST. Następnie może on być usunięty przy pomocy <b>DELETE</b>. Odpowiedzi na żądania tego typu nie powinny zawierać ciała wiadomości.</p>
+    <h2>Nagłówki HTTP</h2>
+    <p>Nagłówki wykorzystywane są do przesyłania metadanych na temat zasobów. Mogą zawierać na przykład informacje o formacie, statusie odpowiedzi czy dacie. Więcej o nich (z przykładami) przeczytacie w artykule podlinkowanym na samym dole zajęć</p>
+    <h2>REST API</h2>
+    <p>REST (ang. Representational State Transfer) jest wzorcem narzucającym dobre praktyki tworzenia architektury aplikacji rozproszonych. RESTful Webservices (inaczej RESTful web API) jest usługą sieciową zaimplementowaną na bazie protokołu HTTP i głównych zasad wzorca REST.</p>
+    <h3>6 zasad REST</h3>
+        <ol>
+            <li><b>Unifrom Interface - interface powinien zapewniać ustandaryzowaną komunikację klient-serwer</b></li>
+            <li><b>Client-Server</b> - wyraźnie zaznaczony podział pomiędzy aplikacją działającą po stronie klienta i serwera</li>
+            <li><b>Stateless</b> - Każde zapytanie musi posiadać komplet informacji koniecznych do jego poprawnego zakończenia</li>
+            <li><b>Cacheable</b> - API powinno wspierać cache'owanie danych w celu zwiększenia wydajności</li>
+            <li><b>Layered System</b> - System powinien być zaprojektowany w taki sposób aby klient wysyłający zapytanie mógł uzyskać odpowiedź bez konieczności posiadania wiedzy co się dzieje "po drugiej stronie"</li>
+            <li><b>Code on demand</b> - przewiduje możliwość wysyłania fragmentó kodu (np. JavaScript), który może być wykonany po stronie klienta</li>
+        </ol>
+        <h3>Przykłady API</h3>
+        <a href="http://thecatapi.com/">http://thecatapi.com/</a><br>
+        <a href="https://api.nasa.gov/">https://api.nasa.gov/</a><br>
+        <a href="https://developer.twitter.com/">https://developer.twitter.com/</a>
+    <h2>3.KWAS_API</h2>
+    <p>Na potrzeby warsztatów, utworzone zostało KWAS_API, specjalne API do przechowywania linków do szeroko pojętych internetowych 'kwasów' (memów).
+Dokumentacjia API jest dostępna pod adresem:
+        <a href="https://github.com/Stanislaw-Golebiewski/warsztaty_lato_2018/tree/master/zaj_8/API">https://github.com/Stanislaw-Golebiewski/warsztaty_lato_2018/tree/master/zaj_8/API</a></p>
+        <p>Url oraz port które są potrzebne by połączyć sie z API zostaną podane na zajęciach, jeśli jednak ktoś chciałby
+je uzyskać poza zajęciami (np. z powodu nieobecności) niech skontaktuje się z jednym z prowadzących.
+            (Stanisław: <a href="mailto:stanislaw.golebiewski@sealcode.org">stanislaw.golebiewski@sealcode.org</a> lub <a href="mailto:stagol@st.amu.edu.pl">stagol@st.amu.edu.pl</a>)</p>
+         <h3>Zadanie 3.1</h3>
+<p>Przy pomocy dowolnego narzędzia wyślij odpowiednie zapytanie HTTP do KWAS_API by uzyskać listę wszystkich dodanych kwasów.
+    Następnie przy pomocy kolejnego zapytania pozyskaj listę tych kwasów które dodał użytkownik o nicku "Kociamber", z tagiem "yt"</p>
+         <h3>Zadanie 3.2</h3>
+<p>Masz swojego ulubionego mema? Podziel się nim ze wszystkimi!
+Przy pomocy dowolnego narzędzia wyślij odpowiednie zapytanie HTTP do KWAS_API które doda nowy zasób,
+    po dodaniu sprawdź jakie id uzyskał.</p>
+    <h2>AXIOS</h2>
+    <p>Do wysyłania zapytań HTTP w następnych zadaniach użyjemy klienta HTTP axios.
+        Zachecamy do przejrzenia przykładów na stronie repozytorium (<a href="https://github.com/axios/axios)">https://github.com/axios/axios</a>).</p>
+         <h3>Zadanie 4.1</h3>
+<p>Napisz prostą stonę zawierającą przycisk. Po wciśnięciu przycisku w konsoli (console.log()) powinien pojawić log z zawartością odpowiedzi na
+    zapytanie HTTP GET /api/v1/kwasy do KWAS_API</p>
+
+         <h3>Zadanie 4.2</h3>
+<p>Ulepsz stronę tak by po wciśnięciu przycisku na stronie pojawiła sie lista linków do wszystkich kwasów pozyskanych z KWAS_API
+    Po ponownym wciśnięciu przycisku lista powinna się odświerzyć.</p>
+
+         <h3>Zadanie 4.3*</h3>
+<p>Dodaj do strony okienko inputu do którego można wpisać id kwasu który nas interesuje, po wciśnięciu przycisku na stronie powinien wyświetlic się
+    tylko ten jeden kwas, lub informacja o braku takiego id w bazie.</p>
+
+
+         <h2>Zadanie Domowe</h2>
+
+         <p>Napisz interface do KWAS_API w postaci strony która pośredniczy w dodaniu nowego kwasu, stona:</p>
+         <ul>
+             <li>ma dawać użytkownikowi możliwość wprowadzenia odpowiendich danych do pól (user, title, source, source_type, tag) np. przez tag &lt;input></li>
+             <li>ma zawierać przycisk dodający nowy kwas</li>
+             <li>ma informować użytkownika o powodzeniu lub niepowodzeniu dodania (np. alert)</li>
+ </ul>
+oczywiście kwas musi faktycznie zostać dodany do bazy danych, tzn. musimy użyć metody POST z naszego KWAS_API
+    <p>Sources: <br>
+        <a href="http://www.samouczekprogramisty.pl/protokol-http/">http://www.samouczekprogramisty.pl/protokol-http/</a>
+        <a href="http://yarpo.pl/2012/07/29/rest-ciekawszy-sposob-na-komunikacje-client-server/">http://yarpo.pl/2012/07/29/rest-ciekawszy-sposob-na-komunikacje-client-server/</a>
+        <a href="https://www.youtube.com/watch?time_continue=2&v=P9b8-BrWdYs">https://www.youtube.com/watch?time_continue=2&v=P9b8-BrWdYs</a>
+    </p>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
